@@ -1,3 +1,5 @@
 aux_source_directory(${CMAKE_CURRENT_LIST_DIR} LIB_SRC_LIST)
-add_library(apue STATIC ${LIB_SRC_LIST} ${APUE_HEADER})
-#set_target_properties(apue PROPERTIES VERSION 1.1 SOVERSION 1)
+add_library(apue_static STATIC ${LIB_SRC_LIST} ${APUE_HEADER})
+#add_library(apue_shared SHARED ${LIB_SRC_LIST} ${APUE_HEADER})
+#set_target_properties(apue_shared PROPERTIES VERSION 1.1 SOVERSION 1)
+install(TARGETS apue_static RUNTIME DESTINATION bin LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
