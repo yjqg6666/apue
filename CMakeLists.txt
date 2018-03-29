@@ -2,6 +2,7 @@ project(cmake)
 cmake_minimum_required(VERSION 3.0)
 
 set(APUE_VERSION 3.0)
+set(CMAKE_BUILD_TYPE Debug)
 
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_FLAGS "-Wall -DMACOS -D_DARWIN_C_SOURCE")
