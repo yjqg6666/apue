@@ -1,8 +1,11 @@
 #include	<stdio.h>
 
-#ifndef LINUX
-extern __const char	*__const sys_errlist[];
-extern __const int	sys_nerr;
+#if defined(__linux__)
+	extern __const char	*__const sys_errlist[];
+	extern int	sys_nerr;
+#elif defined(__APPLE__)
+	extern __const char	*__const sys_errlist[];
+	extern __const int	sys_nerr;
 #endif
 
 char *
